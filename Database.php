@@ -1,14 +1,18 @@
 <?php
 
 include_once "classes/database.class.php";
+include_once "includes/config.php";
 
 // Replace with your actual database credentials
-$db = new Database('localhost', 'your_database_name', 'your_username', 'your_password');
+$db = new Database($db_server, $db, $db_user, $db_pass);
 
 // Example query for fetching users by name
-$name = "%john%";
-$sql = "SELECT * FROM users WHERE name LIKE :name";
+$name = "%Michael%";
+$sql = "SELECT * FROM 'iod.users' WHERE users LIKE :name ";
 $params = [':name' => $name];
+var_dump($sql);
+var_dump("\n");
+var_dump($params);
 $stmt = $db->query($sql, $params);
 
 if ($stmt) {
