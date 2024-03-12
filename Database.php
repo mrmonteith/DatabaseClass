@@ -16,7 +16,7 @@ if ($stmt) {
   $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
   // Process fetched users
   foreach ($users as $user) {
-    echo "User: " . $user['first_name'] . "<br>";
+    echo "User: " . $user['first_name'] ." " .  $user['last_name'] ."<br>";
   }
 }
 
