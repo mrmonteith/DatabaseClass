@@ -8,7 +8,7 @@ $db = new Database($db_server, $db, $db_user, $db_pass);
 
 // Example query for fetching users by name
 $name = "%Michael%";
-$sql = "SELECT * FROM 'iod.users' WHERE users LIKE :name ";
+$sql = "SELECT * FROM users WHERE first_name LIKE :name ";
 $params = [':name' => $name];
 var_dump($sql);
 var_dump("\n");
@@ -19,7 +19,7 @@ if ($stmt) {
   $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
   // Process fetched users
   foreach ($users as $user) {
-    echo "User: " . $user['name'] . "<br>";
+    echo "User: " . $user['first_name'] . "<br>";
   }
 }
 
