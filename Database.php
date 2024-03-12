@@ -10,9 +10,6 @@ $db = new Database($db_server, $db, $db_user, $db_pass);
 $name = "%Michael%";
 $sql = "SELECT * FROM users WHERE first_name LIKE :name ";
 $params = [':name' => $name];
-var_dump($sql);
-var_dump("\n");
-var_dump($params);
 $stmt = $db->query($sql, $params);
 
 if ($stmt) {
