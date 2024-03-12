@@ -8,7 +8,7 @@
 
 The purpose of the structure of the database.class.php is:
 
-##Explanation:
+Explanation:
 
     Database Class:
         Stores database connection information.
@@ -34,13 +34,13 @@ The purpose of the structure of the database.class.php is:
     Error Handling:
         Both connect and query methods handle potential PDO exceptions.
 
-##Benefits:
+Benefits:
 
     Secure against SQL injection.
     Flexible for different queries with parameters.
     Reusable database connection through the Database class.
 
-##Remember:
+Remember:
 
     Update the database credentials with your own information.
     This is a basic example. You can extend it to handle different data types and functionalities.
