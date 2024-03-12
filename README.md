@@ -19,19 +19,19 @@ The purpose of the structure of the database.class.php is:
             Binds parameters to prevent SQL injection.
             Executes the statement and returns it or throws an exception on error.
 
-    ###Database Credentials:
+    ##Database Credentials:
         Replace placeholders with your actual database details.
 
-    ###Example Query:
+    ##Example Query:
         Demonstrates fetching users by name using a LIKE clause.
         Uses a parameter :name for the name search.
 
-    ###Prepared Statement and Parameters:
+    ##Prepared Statement and Parameters:
         The query method uses PDO::prepare for prepared statements.
         Parameters are bound using $stmt->execute($params).
         This approach prevents SQL injection by separating data from the query.
 
-    ###Error Handling:
+    ##Error Handling:
         Both connect and query methods handle potential PDO exceptions.
 
 ##Benefits:
